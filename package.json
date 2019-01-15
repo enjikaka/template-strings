@@ -22,5 +22,5 @@
     "test:node-cmd": "node cmd/test.js",
     "test": "npm run test:node-cmd && npm run test:node-esm"
   },
-  "version": "0.0.5"
+  "version": "0.0.6"
 }

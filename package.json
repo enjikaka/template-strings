@@ -1,38 +1,11 @@
 {
-  "_from": "template-strings",
-  "_id": "template-strings@0.0.4",
-  "_inBundle": false,
-  "_integrity": "sha1-vy4WGfSb+uFSjO3KxLEV2SjJjhM=",
-  "_location": "/template-strings",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "template-strings",
-    "name": "template-strings",
-    "escapedName": "template-strings",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/template-strings/-/template-strings-0.0.4.tgz",
-  "_shasum": "bf2e1619f49bfae1528cedcac4b115d928c98e13",
-  "_spec": "template-strings",
-  "_where": "/Users/tidal/Documents/Dev/derp",
   "author": {
     "name": "Jeremy Karlsson",
-    "email": "jeremy.karlsson@tidal.com"
+    "email": "karlsson@jeremy.se"
   },
-  "bundleDependencies": false,
-  "deprecated": false,
   "description": "String template",
   "devDependencies": {
-    "node-fetch": "^1.6.3",
-    "whatwg-fetch": "^2.0.2"
+    "node-fetch": "^1.6.3"
   },
   "keywords": [
     "string",
@@ -40,11 +13,14 @@
     "json",
     "ES6"
   ],
-  "license": "UNLICENCED",
-  "main": "index.js",
+  "license": "MIT",
+  "main": "cmd/index.js",
+  "module": "esm/index.mjs",
   "name": "template-strings",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:node-esm": "node --experimental-modules esm/test.mjs",
+    "test:node-cmd": "node cmd/test.js",
+    "test": "npm run test:node-cmd && npm run test:node-esm"
   },
   "version": "0.0.4"
 }

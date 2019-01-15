@@ -10,10 +10,36 @@ Example data: `{ name: 'World' }`
 
 *Note:* The "name" property of the JSON object is refered to as `this.name` in the template string.
 
-Full usage example;
+Usage example (Node);
 
 ```
 String.template = require('template-strings');
+
+const template = '<div>Hello ${this.name}!</div>';
+const json = { name: 'World' };
+
+const html = String.template(template, json);
+
+console.log(html);
+```
+
+Usage example (Node ESM);
+
+```
+import stringTemplator from 'template-strings';
+
+const template = '<div>Hello ${this.name}!</div>';
+const json = { name: 'World' };
+
+const html = String.template(template, json);
+
+console.log(html);
+```
+
+Usage example (Browser ESM);
+
+```
+import stringTemplator from 'https://unpkg.com/template-strings?module';
 
 const template = '<div>Hello ${this.name}!</div>';
 const json = { name: 'World' };

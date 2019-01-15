@@ -21,7 +21,7 @@ const menuItemsHTML = menuItems.map(menuItem => String.template(menuItemTemplate
 
 console.log(menuItemsHTML);
 
-const url = 'https://api.saoirse.audio/track/tidal/66522953';
+const url = 'https://api.saoir.se/track/tidal/66522953';
 const mediaItemTemplate = '${this.artist} - ${this.name}';
 
 fetch(url).then(response => response.json())

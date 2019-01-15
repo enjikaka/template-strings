@@ -31,7 +31,7 @@ import stringTemplator from 'template-strings';
 const template = '<div>Hello ${this.name}!</div>';
 const json = { name: 'World' };
 
-const html = String.template(template, json);
+const html = stringTemplator(template, json);
 
 console.log(html);
 ```
@@ -43,11 +43,15 @@ import stringTemplator from 'https://unpkg.com/template-strings?module';
 
 const template = '<div>Hello ${this.name}!</div>';
 const json = { name: 'World' };
+const html = stringTemplator(template, json);
+const div = document.createElement('div');
 
-const html = String.template(template, json);
+div.innerHTML = html;
 
-console.log(html);
+document.body.appendChild(div);
 ```
+
+( Live demo: https://codepen.io/enjikaka/pen/wRNNpr?editors=0010 )
 
 ## Why?
 
